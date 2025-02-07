@@ -1,0 +1,155 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="STYLESHEET" type="text/css" href="estilo.css">
+    <title>INICIO | Fútbol Club</title>
+
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="wear.jpg" alt="futbol wear"> 
+        </div>
+        <div class="title"> Fútbol Wear 
+            
+        </div>
+
+        <div class="menu">
+            <button class="menu-button"> <img src="menu.png" alt="Menu" style="width: 10%; height:auto" > </button>
+            <div class="menu-content">
+                <a href="INDEX.HTML">Inicio</a>
+                <a href="Nosotros.HTML">Nosotros</a>
+                <a href="Trabaje_con_nosotros.HTML">Trabaje con Nosotros</a>
+                <a href="PQRS.HTML">PQRS</a>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <h1>Bienvenidos a Fútbol Wear</h1>
+		
+    </div>
+	<div class="tabla-container">
+    <div class="titulo-tabla">Camisetas de Fútbol </div>
+	<table>
+        <tr>
+            <th>Equipo</th>
+            <th>Imagen</th>
+            <th>Precio</th>
+			<th>Cantidad</th>
+            <th>Comprar</th>
+        </tr>
+        <tr>
+            <td>Manchester United</td>
+            <td><img src="manuntd.png" alt="Camiseta Manchester United"></td>
+            <td>$135000 cop</td>
+			<td><input type="number" id="cantidad_Manchester United" min="1" value="1"></td>
+            <td><button onclick="comprar('Manchester United', 135000, 'cantidad_Manchester United')">Comprar</button></td>
+        </tr>
+        <tr>
+            <td>Real Madrid</td>
+            <td><img src="real_madrid.png" alt="Camiseta Real Madrid"></td>
+            <td>$160000 cop</td>
+			<td><input type="number" id="cantidad_Real Madrid" min="1" value="1"></td>
+            <td><button onclick="comprar('Real Madrid', 160000, 'cantidad_Real Madrid')">Comprar</button></td>
+        </tr>
+        <tr>
+            <td>Liverpool</td>
+            <td><img src="liverpool.png" alt="Camiseta Liverpool"></td>
+            <td>$139900 cop</td>
+			<td><input type="number" id="cantidad_Liverpool" min="1" value="1"></td>
+            <td><button onclick="comprar('Liverpool', 139900, 'cantidad_Liverpool')">Comprar</button></td>
+        </tr>
+    </table>
+</div>
+
+<div class="tabla-container">
+    <div class="titulo-tabla">Camisetas de Fútbol Personalizadas para Niños</div>
+    <table>
+        <tr>
+            <th>Equipo</th>
+            <th>Imagen</th>
+            <th>Precio</th>
+			<th>Cantidad</th>
+            <th>Comprar</th>
+        </tr>
+        <tr>
+            <td>Infantil Barcelona</td>
+            <td><img src="barce_niño.png" alt="Camiseta Infantil Barcelona"></td>
+            <td>$100000 cop</td>
+			<td><input type="number" id="cantidad_barcelona" min="1" value="1"></td>
+            <td><button onclick="comprar('FC Barcelona', 100000, 'cantidad_barcelona')">Comprar</button></td>
+        </tr>
+        <tr>
+            <td>Infantil Real Madrid</td>
+            <td><img src="real_niño.png" alt="Camiseta Infantil Real Madrid"></td>
+            <td>$100000 cop</td>
+			<td><input type="number" id="cantidad_Infantil Real" min="1" value="1"></td>
+            <td><button onclick="comprar('Infantil Real Madrid', 100000, 'cantidad_Infantil Real')">Comprar</button></td>
+        </tr>
+			
+        </tr>
+        <tr>
+            <td>Infantil PSG</td>
+            <td><img src="psg_niño.png" alt="Camiseta Infantil PSG"></td>
+            <td>$100000 cop</td>
+			<td><input type="number" id="cantidad_PSG" min="1" value="1"></td>
+            <td><button onclick="comprar('PSG', 100000, 'cantidad_PSG')">Comprar</button></td>
+        </tr>
+    </table>
+</div>
+
+<div class="tabla-container">
+    <div class="titulo-tabla">Camisetas Personalizadas con Nombre</div>
+    <table>
+        <tr>
+            <th>Equipo</th>
+            <th>Imagen</th>
+            <th>Precio</th>
+			<th>Cantidad</th>
+            <th>Comprar</th>
+        </tr>
+        <tr>
+            <td>Personalizada B.Leverkusen </td>
+            <td><img src="Leverkusen.png" alt="Camiseta Personalizada Bayer Leverkusen"></td>
+            <td>$200000 cop</td>
+			<td><input type="number" id="cantidad_Bayer Leverkusen" min="1" value="1"></td>
+            <td><button onclick="comprar('Bayer Leverkusen', 200000, 'cantidad_Bayer Leverkusen')">Comprar</button></td>
+        </tr>
+        <tr>
+            <td>Personalizada Real Madrid </td>
+            <td><img src="real_person.png" alt="Camiseta Personalizada Real Madrid"></td>
+            <td>$240000 cop</td>
+			<td><input type="number" id="cantidad_personalizada Madrid" min="1" value="1"></td>
+            <td><button onclick="comprar('Personalizada Real Madrid', 240000, 'cantidad_personalizada Madrid')">Comprar</button></td>
+        </tr>
+        <tr>
+            <td>Personalizada Juventus </td>
+            <td><img src="juventus.png" alt="Camiseta Personalizada Juventus"></td>
+            <td>$215000 cop</td>
+			<td><input type="number" id="cantidad_Juventus" min="1" value="1"></td>
+            <td><button onclick="comprar('Juventus', 215000, 'cantidad_Juventus')">Comprar</button></td>
+        </tr>
+    </table>
+</div>
+
+<script>
+        function comprar(equipo, precio, cantidadId) {
+            let cantidad = document.getElementById(cantidadId).value;
+            alert(`Has comprado ${cantidad} camiseta(s) del ${equipo} por un total de $${precio * cantidad} cop`);
+        }
+    </script>
+    
+	<footer>
+   
+   
+    <div>
+        <a href="PQRS.HTML">Contacto</a>
+		| <a href="PQRS.HTML">Política de Privacidad</a>
+		| <a href="PQRS.HTML">Términos y Condiciones</a>
+    </div>
+    <div class="copy-right">
+        <p>&copy; 2025 Futbol Wear. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>
